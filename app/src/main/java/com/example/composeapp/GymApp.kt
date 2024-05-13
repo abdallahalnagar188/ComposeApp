@@ -54,7 +54,7 @@ fun GymItem(gym: Gym, onClick: (Int) -> Unit) {
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(8.dp)
+            modifier = Modifier.padding(10.dp)
         ) {
             DefaultIcon(
                 icon = Icons.Filled.Place,
