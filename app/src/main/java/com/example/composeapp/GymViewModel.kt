@@ -18,14 +18,10 @@ class GymViewModel() : ViewModel() {
                 .build()
         apiService = retrofit.create(GymsApiService::class.java)
 
-    }
-
-    private fun getGyms() {
-        apiService.getGyms().execute().body()?.let {gymsList->
-            state = gymsList
-        }
 
     }
+
+    private fun getGyms() = listOfGums
     fun toggleFavoriteState(gymId:Int){
         val gyms = state.toMutableList()
         val itemIndex = gyms.indexOfFirst { it.id == gymId }
