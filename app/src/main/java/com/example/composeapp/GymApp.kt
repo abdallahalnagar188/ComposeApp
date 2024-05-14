@@ -27,12 +27,12 @@ import com.example.composeapp.ui.theme.Purple40
 
 @Composable
 fun GymApp() {
-    val viewModel: GymViewModel = viewModel()
+    val vm: GymViewModel = viewModel()
 
     LazyColumn(Modifier.padding(8.dp)) {
-        items(viewModel.state) {
+        items(vm.state) {
             GymItem(it) {
-                viewModel.toggleFavoriteState(it)
+                vm.toggleFavoriteState(it)
 
             }
         }

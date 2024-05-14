@@ -1,8 +1,17 @@
 package com.example.composeapp
 
-data class Gym(val id: Int, val name: String, val details: String, var isFavorite: Boolean = false)
+import com.google.gson.annotations.SerializedName
 
-val gym = listOf(
+data class Gym(
+    val id: Int,
+    @SerializedName("gym_name")
+    val name: String,
+    @SerializedName("gym_location")
+    val details: String,
+    var isFavorite: Boolean = false
+)
+
+val listOfGums = listOf(
     Gym(1,"Hammer Gym", "cairo eg, mit akaba ,20 algihad street "),
     Gym(2,"UpDown Gym", "cairo eg, mit akaba ,20 algihad street "),
     Gym(3,"Halk Gym", "cairo eg, mit akaba ,20 algihad street "),
